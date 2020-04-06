@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+
+/* General Selectors */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+.social-links {
+    color: white;
+}
+
+body {
+    background: #3F81B1;
+    color: white;
+    min-height: 100vh;
+    max-height: 100vh;
+    font-family: 'ABeeZee', sans-serif;
+    font-weight: 400;
+    display: grid;
+}
+
+.container {
+    max-width: 85%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2.5vw;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 1.4vw;
+    font-weight: 400;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+header img {
+    max-width: 6rem;
+    max-height: 6rem;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    flex: 2 1 25rem;
+}
+button {
+    background: #b9381e;
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    font-family: inherit;
+    font-size: 1.8rem;
+}
+
+.grid {
+    grid-template-columns: repeat(11, 9vw);
+    grid-template-rows: repeat(6, 16vh);
+}
+
+header {
+    grid-column: 2/11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.apartment-background {
+    grid-column: 4/13;
+    grid-row: 2/8;
+    background: url(images/apartment-affinity-not-back.png);
+    opacity: 90%;
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    animation: apartment 1.5s ease-in;
+}
+
+.left-side-col {
+    grid-column: 2/4;
+    grid-row: 3/8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    animation: text 1s ease-in
+}
+
+.box4-text{
+    grid-column: 2/5;
+    grid-row-start: 2;
+    text-align: left;
+    animation: apartment 1.5s ease-in;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    background: rgba(51, 105, 143, 0.2);
+}
+
+@keyframes apartment {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 90%
+    }
+}
+
+@keyframes text {
+    0%{
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50% -50%);
+        opacity: 100;
+    }
+
+    100% {
+        transform: translate(-0%);
+    }
+}
